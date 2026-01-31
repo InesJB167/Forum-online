@@ -1,11 +1,13 @@
 # 💬 Sistema de Fórum Online
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Django](https://img.shields.io/badge/Django-Framework-green?logo=django)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+![React](https://img.shields.io/badge/React-Front--end-blue?logo=react)
+![Node](https://img.shields.io/badge/Node.js-Back--end-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-API-lightgrey?logo=express)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 
 ---
 
@@ -39,10 +41,10 @@ O projeto prioriza:
 
 ## 🧰 Tech Stack
 
-| Camada        | Tecnologias |
-|--------------|-------------|
-| 🎨 Front-end | HTML5, CSS3, JavaScript, Bootstrap |
-| ⚙️ Back-end  | Python + Django |
+| Camada | Tecnologias |
+|------|-------------|
+| 🎨 Front-end | React.js, HTML5, CSS3, JavaScript |
+| ⚙️ Back-end | Node.js, Express.js |
 | 🗄️ Banco de Dados | MySQL |
 | 🔧 Versionamento | Git & GitHub |
 
