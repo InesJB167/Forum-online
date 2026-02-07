@@ -1,0 +1,12 @@
+
+button{
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--cor1);
+}
+
+
