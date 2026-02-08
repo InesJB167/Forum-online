@@ -1,19 +1,18 @@
-
-
-.container{
+.containerSelect{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-input{
+.containerSelect > select{
     height: 30px;
 }
 
-.containerRegister{
+
+.especialSelect{
     gap: 5px;
 }
 
-.inputR{
+.especialSelect > select{
     height: 25px;
 }
