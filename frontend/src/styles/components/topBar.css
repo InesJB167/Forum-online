@@ -1,0 +1,18 @@
+.topo{
+    background-color: rgb(37,37,37);
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.iconItems{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 90%;
+}
+
+
+

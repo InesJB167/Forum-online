@@ -1,0 +1,19 @@
+.input{
+    width: 500px;
+    background-color: aliceblue;
+    display: flex;
+    border-radius: 10px;
+}
+
+.input:focus-within{
+    border: 1px solid blue;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+input{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    width: 490px;
+}
