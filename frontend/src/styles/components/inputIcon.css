@@ -10,10 +10,15 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-input{
+input.inputItem{
     border: none;
     background-color: transparent;
     padding: 10px;
     outline: none;
     width: 490px;
+}
+
+button.btn{
+    background-color: transparent;
+    margin-top: 0;
 }

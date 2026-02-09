@@ -6,8 +6,8 @@ function InputIcon({icon,texto,buscar}){
     return(
         <>
         <div className="input">
-            <input type={texto} placeholder={buscar} />
-            <button>{icon}</button>
+            <input className='inputItem' type={texto} placeholder={buscar} />
+            <button className='btn'>{icon}</button>
         </div>
         </>
     );

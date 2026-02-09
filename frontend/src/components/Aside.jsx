@@ -20,7 +20,7 @@ function Aside(){
                 <ItensList icon={icons[3]} text='Tópicos'/>
                 <ItensList icon={icons[4]} text='Chat'/>
                 <ItensList icon={icons[5]} text='Configurações'/>
-                <li className='btn'><button>{icons[6]}<p>Sair</p></button></li>
+                <li className='btn'><button className='btnSair'>{icons[6]}<p>Sair</p></button></li>
             </ul>
            </nav>
         </div>

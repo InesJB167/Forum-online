@@ -20,7 +20,7 @@ function Login(){
                        <InputGroup label="Email:" type="email" id="email"/>
                        <InputGroup label="Password:" type="Password" id="senhaDestructuring Assignment "/>
                        <Buttom type="submit" texto="Login"/>
-                        <p id='link'>Don't have an account? <Link to="/register">Sign up!</Link></p>
+                        <p id='link'>Don't have an account? <Link to="/Register">Sign up!</Link></p>
                     </form>
                 </div>
             </main>

@@ -39,7 +39,7 @@ li{
 }
 
 
-button{
+button.btnSair{
     display: flex;
     gap: 15px;
     background-color: transparent;

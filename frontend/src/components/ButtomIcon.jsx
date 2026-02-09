@@ -6,7 +6,7 @@ function ButtomIcon({icon}){
     return(
         <>
         <div className="btn">
-            <button>{icon}</button>
+            <button className='btnIcon'>{icon}</button>
         </div>
         </>
     );
