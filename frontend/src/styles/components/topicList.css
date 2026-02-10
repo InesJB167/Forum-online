@@ -1,0 +1,22 @@
+.topicos{
+    background-color: #fff1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 60px;
+}
+
+.tema{
+    font-weight: bold;
+}
+
+.autor{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.reacoes{
+    display: flex;
+    gap: 20px;
+}
