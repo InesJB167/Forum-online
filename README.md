@@ -64,3 +64,36 @@ Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
 ## 📄 Licença
 Este projeto está sob a licença **MIT**.
+
+---
+## 🚀 Como Executar o Projeto
+
+Atualmente, este repositório contém a interface funcional (Frontend) do sistema. Para rodar o projeto localmente, siga os passos abaixo:
+
+### 📋 Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina:
+* [Node.js](https://nodejs.org/) (versão LTS recomendada)
+* Um gerenciador de pacotes (npm ou yarn)
+
+### 🛠️ Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+
+2. **Entre na pasta do frontend:**
+   ```bash
+   cd frontend
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+
+5. **Acesse no navegador:**
+   
+    O terminal informará a porta local, que por padrão é:
+🔗 http://localhost:5173
