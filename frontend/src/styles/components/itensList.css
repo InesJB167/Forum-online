@@ -4,6 +4,8 @@
     display: flex;
     gap: 15px;
     color: rgb(199, 196, 196);
+    text-decoration: none;
+    padding-left: 30px;
 }
 
 .item:hover{

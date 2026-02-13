@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import '../styles/components/itensList.css'
 
-function ItensList({icon,text,id}){
+function ItensList({icon,text,url}){
     return(
         <>
-        <li id={id} className='item'>{icon}<p>{text}</p></li>
-        </>
+        <Link to={url} className='item'>{icon}<p>{text}</p></Link>
+        </> 
     );
 }
 

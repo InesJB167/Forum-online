@@ -1,6 +1,6 @@
 import '../styles/components/aside.css'
 import {Home, ListIcon, LogOut, MessageCircleIcon, MessageSquareMore, SettingsIcon, UserCircle2} from 'lucide-react'
-import ItensList from './ItensList';
+import ItensList from './ItensList'
 
 function Aside(){
 
@@ -15,11 +15,11 @@ function Aside(){
            </div>
            <nav>
             <ul>
-                <ItensList icon={icons[2]} text='Home'/>
-                <ItensList icon={icons[1]} text='Perfil'/>
-                <ItensList icon={icons[3]} text='Tópicos'/>
-                <ItensList icon={icons[4]} text='Chat'/>
-                <ItensList icon={icons[5]} text='Configurações'/>
+                <ItensList url='/Home' icon={icons[2]} text='Home'/>
+                <ItensList url='/Home/perfil' icon={icons[1]} text='Perfil'/>
+                <ItensList url='/Home/topico' icon={icons[3]} text='Tópicos'/>
+                <ItensList url='/Home/chat' icon={icons[4]} text='Chat'/>
+                <ItensList url='/Home/config' icon={icons[5]} text='Configurações'/>
                 <li className='btn'><button className='btnSair'>{icons[6]}<p>Sair</p></button></li>
             </ul>
            </nav>

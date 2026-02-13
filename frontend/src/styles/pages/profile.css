@@ -1,0 +1,94 @@
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.esquerda, .direita{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 160px;
+    width: 550px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.infoUser{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nameUser{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.userState{
+    display: flex;
+    flex-direction: column;
+    gap: 
+    0;
+}
+
+.nome {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.estado{
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    background-color: rgba(13, 201, 13, 0.93);
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-top: 2px;
+}
+
+.resumoAtividade {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.resumo{
+    border-right: 3px solid grey;
+    padding-right: 10px;
+    height: 50px;
+}
+
+.topico, .numero{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.topico{
+    font-size: 1rem;
+}
+
+.numero{
+    font-size: 1.2rem;
+}
+
+#ultimoResumo{
+    border-right: none;
+}
+
+.topic{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+

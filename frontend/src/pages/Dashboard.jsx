@@ -9,9 +9,9 @@ function Dashboard(){
     return(
        <>
        <div className="content">
-        <Aside className='aside'/>
-        <TopBar classname='topBar'/>
-        <MainContent className='main'/>
+        <Aside />
+        <TopBar />
+        <MainContent />
        </div>
        </>
     );

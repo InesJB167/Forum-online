@@ -1,0 +1,43 @@
+
+.editarPerfil{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 370px;
+    width: 510px;
+}
+
+.inputUser{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputUser input{
+    width: 400px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+
+.meuPerfil{
+    font-size: 1.5rem;
+}
+
+.bio{
+    display: flex;
+    gap: 10px;
+}
+
+#bio{
+    width: 500px;
+    height: 100px;
+}
+
+.btnAlterar{
+    width: 200px;
+    position: relative;
+    left: 60%;
+}
