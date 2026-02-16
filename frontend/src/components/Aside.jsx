@@ -2,9 +2,10 @@ import '../styles/components/aside.css'
 import {Home, ListIcon, LogOut, MessageCircleIcon, MessageSquareMore, SettingsIcon, UserCircle2} from 'lucide-react'
 import ItensList from './ItensList'
 
-function Aside(){
+function Aside({abrir}){
 
     const icons=[<MessageSquareMore size={48} />,<UserCircle2 size={32}/>,<Home size={32}/>,<ListIcon size={32}/>,<MessageCircleIcon size={32}/>,<SettingsIcon size={32}/>,<LogOut size={32}/>]
+    
 
     return(
         <>
@@ -17,7 +18,9 @@ function Aside(){
             <ul>
                 <ItensList url='/Home' icon={icons[2]} text='Home'/>
                 <ItensList url='/Home/perfil' icon={icons[1]} text='Perfil'/>
-                <ItensList url='/Home/topico' icon={icons[3]} text='Tópicos'/>
+                
+                <li className='btn'><button className='btnSair' onClick={abrir}>{icons[6]}<p>Tópico</p></button></li>
+                 
                 <ItensList url='/Home/chat' icon={icons[4]} text='Chat'/>
                 <ItensList url='/Home/config' icon={icons[5]} text='Configurações'/>
                 <li className='btn'><button className='btnSair'>{icons[6]}<p>Sair</p></button></li>

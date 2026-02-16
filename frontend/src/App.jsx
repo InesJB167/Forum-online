@@ -6,7 +6,6 @@ import Profile from './pages/Profile';
 import Config from './pages/Config';
 import Main from './components/Main';
 import Chat from './pages/Chat'
-import Topico from './pages/Topico'
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
             <Route index element={<Main/>}/>
             <Route path='perfil' element={<Profile/>}/>
             <Route path='chat' element={<Chat/>}/>
-            <Route path='topico' element={<Topico/>}/>
             <Route path='config' element={<Config/>}/>
         </Route>
       </Routes>
