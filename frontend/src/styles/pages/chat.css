@@ -1,0 +1,35 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+#topic1{
+    width: 360px;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    left: 73%;
+    top: 11%;
+}
+
+#topic1 h2{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.msg{
+    width: 700px;
+    height: 445px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.postar{
+    position: absolute;
+    top: 90%;
+    left: 20.5%;
+    border-radius: 10px;
+}

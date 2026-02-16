@@ -1,0 +1,48 @@
+
+.mensagens{
+    display: flex;
+    gap: 10px;
+}
+
+.postContent{
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 400px;
+    gap: 10px;
+}
+
+.msg{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* temtando fazer um acabamento nas mensagens
+.postContent::after{
+    content: "";
+    position: absolute;
+    top: 48.9%;
+    left: 23.8%;
+    width: 31px;
+    height: 55px;
+    background-color: rgba(0, 0, 255, 0.298);
+    transform: rotate(16.7deg);
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    z-index: 999;
+}
+*/
+
+.postContent ,.autor-conteudo{
+    display: flex;
+    flex-direction: column;
+}
+
+.reacoesPost{
+    display: flex;
+    gap: 10px;
+    width: 70px;
+    align-self: flex-end;
+}

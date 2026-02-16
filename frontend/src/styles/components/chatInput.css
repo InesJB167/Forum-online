@@ -1,0 +1,21 @@
+#arquivo{
+    display: none;
+}
+
+.iconeFundo{
+    padding: 10px;
+    height: 40px;
+}
+
+.conjunto{
+    display: flex;
+    border: 1px solid black;
+    width: 700px;
+}
+
+.inputComent{
+    width: 900px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+}

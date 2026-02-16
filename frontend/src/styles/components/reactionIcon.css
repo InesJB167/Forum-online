@@ -1,5 +1,13 @@
 .reaction{
     display: flex;
-    gap: 2px;
+    gap: 3px;
 }
 
+.icon{
+    background-color: transparent;
+    margin-top: 5px;
+}
+
+.number{
+    margin-bottom: 0;
+}

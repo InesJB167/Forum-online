@@ -4,7 +4,7 @@ function ReactionIcon({icon,number}){
     return(
         <>
         <div className="reaction">
-            <p className="icon">{icon}</p>
+            <button className="icon">{icon}</button>
             <p className="number">{number}</p>
         </div>
         </>
