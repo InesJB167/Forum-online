@@ -11,3 +11,8 @@
 .number{
     margin-bottom: 0;
 }
+
+.botaoEstado{
+    position: relative;
+    left: 20%;
+}

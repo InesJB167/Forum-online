@@ -1,0 +1,15 @@
+.bloco-itens{
+    display: flex;
+    gap: 10px;
+}
+
+.btnEstado{
+    margin-top: 0;
+    width: 50px;
+}
+
+.itemBloco{
+    position: relative;
+    top: 7px;
+    font-size: 1.2rem;
+}
