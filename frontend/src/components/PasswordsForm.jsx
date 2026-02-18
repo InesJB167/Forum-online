@@ -1,5 +1,5 @@
-import Buttom from "./Buttom";
-import InputGroup from "./InputGrourp";
+import Buttom from "./buttons/Buttom";
+import InputGroup from "./inputs/InputGrourp";
 import '../styles/components/passwordForm.css'
 
 function PasswordsForm(){

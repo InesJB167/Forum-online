@@ -1,17 +1,47 @@
 @charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root{
-    /*Paleta de cores*/
-    --cor1: #0A58BF;
-    --cor2: #084F8C;
-    --cor3: #073359;
-    --cor4: #05DBF2;
-    --cor5: #05F2F2;
+    /*Paleta de cores- Modo Claro */
+    --corFundoPrincipal: #0F172A;
+    --corFundoRelativo: #152447e4;
+    --corFundoCards: #1e293b;
+    --corFundoHover: #334155;
+    --corFundoHover2: #1d3160;
+    --corTextoPrincipal: #F1F5F9;
+    --corTextoSecundario: #94A3B8;
+
+    /*Paleta de cores- Modo Claro */
+    --corFundo: #F8FAFC;
+    --corCard: #FFFFFF;
+    --corBorda: #E2E8F0;
+    --corTextoP: #0F172A;
+    --corTextoS: #475569;
+
+    /*Palleta botoes*/
+    --FundoBotao: #2563EB;
+    --Hover: #1D4ED8;
+    --clicado: #1E40AF;
+    --Disabled: #94A3B8;
+
+    /*Palleta links no Modo Escuro*/
+    --Link: #0F172A;
+    --LinkNormal: #3B82F6;
+    --LinkHover: #60A5FA;
+    --LinkAtive: #1D4ED8;
+
+    /*Links no Modo Claro*/
+    --Linkclaro: #F8FAFC;
+    --LinkN2: #2563EB;
+
+    /*Fontes*/
+    --fontePrincipal: "Inter", sans-serif;
+    --fonteSecundaria: "Roboto", sans-serif;
+    --fonte3: "Open Sans", sans-serif;
+
 }

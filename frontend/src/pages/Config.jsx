@@ -1,12 +1,12 @@
 import ItensBloco from '../components/ItensBloco';
 import '../styles/pages/config.css'
-import Buttom from "../components/Buttom"
+import Buttom from "../components/buttons/Buttom"
 
 function Config(){
     return(
         <>
         <div className="config">
-            <h1>Configurações</h1>
+            <h1 id='configTitle'>Configurações</h1>
             <div className="bloco1">
                 <h2 className='nomeBloco'>Notificações</h2>
                 <div className="itens-bloco1">

@@ -1,9 +1,13 @@
 .card{
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     border-radius: 20px;
-    background-color: #fff;
-    padding: 30px;
+    background-color: var(--corFundoRelativo);
+    padding: 20px;
+}
+
+.card:hover{
+    background-color: var(--corFundoHover2);
 }
 
 .textoSaudacoes{

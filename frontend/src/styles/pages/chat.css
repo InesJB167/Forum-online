@@ -1,7 +1,7 @@
 .chat{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
 }
 
 #topic1{
@@ -19,10 +19,10 @@
 }
 
 .msg{
-    width: 700px;
-    height: 445px;
+    width: 680px;
+    height: 400px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--corFundoHover2);
     margin-top: 10px;
     overflow: auto;
 }

@@ -1,7 +1,6 @@
 import { MessageSquareMore, ThumbsDown, ThumbsUp } from "lucide-react";
-import '../styles/components/topicList.css'
-import ReactionIcon from "./RectionsIcon";
-
+import '../../styles/components/topic-elements/topicList.css'
+import ReactionIcon from "../RectionsIcon"
 
 function TopicoCategoria({topico,categoria}){
     const icone=[<MessageSquareMore size={16}/>,<ThumbsUp size={16}/>,<ThumbsDown size={16} />]
@@ -13,7 +12,7 @@ function TopicoCategoria({topico,categoria}){
                 <p className="categoria">Categoria:{categoria} </p>
             </div>
             <div className="reacoes">   
-                <ReactionIcon icon={icone[0]} number='13'/>
+                <ReactionIcon icon={icone[0]} number='2'/>
                 <ReactionIcon icon={icone[1]} number='5'/>
                 <ReactionIcon icon={icone[2]} number='2'/>
             </div>

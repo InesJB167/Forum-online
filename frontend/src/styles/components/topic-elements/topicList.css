@@ -1,10 +1,13 @@
 .topicos{
-    background-color: #fff1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
     height: 60px;
+}
+
+.topicos:hover{
+    background-color: var(--corFundoHover2);
 }
 
 .tema{

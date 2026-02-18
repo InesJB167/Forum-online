@@ -1,0 +1,13 @@
+.containerSelect{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select{
+    height: 25px;
+    width: 200px;
+    background-color: transparent;
+    padding: 5px;
+    color: var(--corTextoPrincipal);
+}

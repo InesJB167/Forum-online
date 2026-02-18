@@ -1,9 +1,9 @@
 .header{
-    width: 700px;
+    width: 680px;
     height: 180px;
-    border: 1px solid black;
+    border: 1px solid var(--corFundoHover2);
     border-radius: 20px;
-    padding: 10px;
+    padding: 7px;
 }
 
 #btnEncolher{

@@ -1,7 +1,7 @@
-import TopicHeader from '../components/TopicHeader';
+import TopicHeader from '../components/topic-elements/TopicHeader';
 import '../styles/pages/chat.css'
-import TopicoCategoria from '../components/TopicoCategoria';
-import ChatInput from '../components/ChatInput';
+import TopicoCategoria from '../components/topic-elements/TopicoCategoria';
+import ChatInput from '../components/inputs/ChatInput';
 import Messeger from '../components/Messeger';
 
 function Chat(){

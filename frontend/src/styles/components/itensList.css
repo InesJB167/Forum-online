@@ -3,18 +3,20 @@
 .item{
     display: flex;
     gap: 15px;
-    color: rgb(199, 196, 196);
+    color: var(--corTextoPrincipal);
     text-decoration: none;
     padding-left: 30px;
+    height: 50px;
+    padding-top: 10px;
 }
 
 .item:hover{
-    background-image: linear-gradient(50deg, rgba(27, 27, 246, 0.419),transparent);
-    border-right: 5px solid blue;
+    background-image: linear-gradient(50deg,var(--corFundoPrincipal),transparent);
+    border-right: 5px solid var(--corFundoPrincipal);
     cursor: pointer;
 }
 
 p{
     position: relative;
-    top: 10px;
+    top: 12px;
 }

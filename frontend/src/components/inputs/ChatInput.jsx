@@ -1,9 +1,9 @@
 import { File, SendHorizonal } from "lucide-react";
-import ButtomIcon from "./ButtomIcon";
-import '../styles/components/chatInput.css'
+import ButtomIcon from "../buttons/ButtomIcon";
+import '../../styles/components/inputs/chatInput.css'
  
 function ChatInput({className}){
-    const icone=[<SendHorizonal size={25}/>,<File size={25}/>]
+    const icone=[<SendHorizonal size={25} color="#F1F5F9"/>,<File size={25}/>]
     return(
         <>
         <div className={`conjunto ${className}`}>

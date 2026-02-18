@@ -1,5 +1,5 @@
 .aside{
-    background-color: rgb(37, 37, 37);
+    background-color: var(--corFundoRelativo);
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -22,15 +22,12 @@ h1{
     font-size: 1.7rem;
 }
 
-.paragrafo{
-    font-weight: 100;
-}
 
 ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
 }
 
 li{
@@ -46,11 +43,12 @@ button.btnSair{
     background-color: transparent;
     color: rgb(196,196,196);
     margin: 0;
+    font-size: 1rem;
 }
 
 li.btn:hover{
-    background-image: linear-gradient(50deg, rgba(27, 27, 246, 0.419),transparent);
-    border-right: 5px solid blue;
+    background-image: linear-gradient(50deg,var(--corFundoPrincipal),transparent);
+    border-right: 5px solid var(--corFundoPrincipal);
     cursor: pointer;
 }
 

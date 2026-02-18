@@ -1,4 +1,4 @@
-import '../styles/components/buttomIcon.css'
+import '../../styles/components/buttons/buttomIcon.css'
 
 
 function ButtomIcon({icon,fechar,id,className}){

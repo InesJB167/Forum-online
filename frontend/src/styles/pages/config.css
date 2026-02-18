@@ -1,11 +1,16 @@
 .config{
-    border: 1px solid black;
+    border: 1px solid var(--corFundoHover2);
+    border-radius: 10px;
     width: 700px;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+}
+
+#configTitle{
+    text-align: center;
 }
 
 .itens-bloco1{
@@ -23,11 +28,12 @@
 .itens-bloco3{
     display: flex;
     flex-direction: row;
-    gap: 510px;
+    gap: 528px;
 }
 
 .nomeBloco{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--corFundoHover2);
+    padding-bottom: 7px;
     margin-bottom: 10px;
 }
 
@@ -52,4 +58,5 @@
 
 .botoesEstilo{
     width: 200px;
+    background-color: rgba(235, 39, 39, 0.978);
 }

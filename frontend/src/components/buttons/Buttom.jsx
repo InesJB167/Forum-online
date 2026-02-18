@@ -1,4 +1,4 @@
-import '../styles/components/buttom.css'
+import '../../styles/components/buttons/buttom.css'
 
 function Buttom({texto,type,icon,className,id,fechar}){
     return (

@@ -1,13 +1,13 @@
 
 .editarPerfil{
-    border: 1px solid black;
+    border: 1px solid var(--corFundoHover2);
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 370px;
-    width: 510px;
+    width: 480px;
 }
 
 .inputUser{

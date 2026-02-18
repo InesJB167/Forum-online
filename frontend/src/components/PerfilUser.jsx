@@ -1,7 +1,7 @@
 import '../styles/components/perfilUser.css'
-import InputGroup from "../components/InputGrourp"
-import SelectGroup from "../components/SelectGroup"
-import Buttom from "../components/Buttom"
+import InputGroup from "../components/inputs/InputGrourp"
+import SelectGroup from "../components/inputs/SelectGroup"
+import Buttom from "../components/buttons/Buttom"
 
 
 function PerfilUser(){

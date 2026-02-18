@@ -9,7 +9,8 @@ function FundoImagem(){
         borderRadius: '20px',
         backgroundSize: 'contain',
         backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#ffff'
     }
     console.log(Imagem)
     return(

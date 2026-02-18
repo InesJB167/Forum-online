@@ -1,7 +1,7 @@
-import InputGroup from "../components/InputGrourp"
-import SelectGroup from "../components/SelectGroup"
-import Buttom from "../components/Buttom"
-import ButtomIcon from "../components/ButtomIcon"
+import InputGroup from "../components/inputs/InputGrourp"
+import SelectGroup from "../components/inputs/SelectGroup"
+import Buttom from "../components/buttons/Buttom"
+import ButtomIcon from "../components/buttons/ButtomIcon"
 import { X } from "lucide-react"
 import '../styles/pages/topico.css'
 
@@ -17,7 +17,7 @@ function Topico({isOpen,Closed}){
 
                 <h2 className="tituloTopico">Criar Novo Tópico</h2>
                 <InputGroup label='Título' type='text' id='titulo' />
-                <SelectGroup label='Categoria' id='cat' option1='Tecnologia' option2='Marketing'/>
+                <SelectGroup label='Categoria' id='cat' option1='Tecnologia de informação' option2='Marketing'/>
                 <div className="desc">
                     <label htmlFor="descricao">Descrição</label>
                     <textarea name="desc" id="desc"></textarea>

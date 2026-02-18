@@ -1,9 +1,9 @@
 .topBar{
-    background-color: rgb(37,37,37);
+    background-color: var(--corFundoRelativo);
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     display: flex;
 }
 

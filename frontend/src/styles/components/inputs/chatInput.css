@@ -9,13 +9,12 @@
 
 .conjunto{
     display: flex;
-    border: 1px solid black;
+    border: 1px solid var(--corFundoHover2);
     width: 700px;
 }
 
 .inputComent{
     width: 900px;
-    height: 40px;
     padding: 5px;
     border: none;
 }

@@ -6,14 +6,13 @@
     gap: 10px;
 }
 
-input{
-    height: 30px;
-}
-
 .containerRegister{
     gap: 5px;
 }
 
 .inputR{
+    background-color: #cccccc;
     height: 25px;
+    border-radius: 5px;
+    border: none;
 }

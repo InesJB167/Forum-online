@@ -5,7 +5,11 @@
 
 .icon{
     background-color: transparent;
-    margin-top: 5px;
+    margin-top: 3px;
+}
+
+.icon:hover{
+    background-color: transparent;
 }
 
 .number{

@@ -1,4 +1,4 @@
-import '../styles/components/card.css'
+import '../../styles/components/cards/card.css'
 
 function Card({numero,texto,icone,frase}){
     return(

@@ -1,7 +1,7 @@
 import { UserCircle2Icon } from "lucide-react"
 import '../styles/pages/profile.css'
 import PerfilUser from "../components/PerfilUser"
-import TopicoCategoria from "../components/TopicoCategoria"
+import TopicoCategoria from "../components/topic-elements/TopicoCategoria"
 import PasswordsForm from "../components/PasswordsForm.jsx"
 
 function Profile(){
@@ -40,7 +40,7 @@ function Profile(){
                     </div>
                 </div>
                 <div className="topic">
-                    <h2>Meus tópicos</h2>
+                    <h2 id="tituloTopic">Meus tópicos</h2>
                     <TopicoCategoria topico='English language' categoria='Linguas'/>
                     <TopicoCategoria topico='English language' categoria='Linguas'/>
                     <TopicoCategoria topico='English language' categoria='Linguas'/>

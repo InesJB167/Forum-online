@@ -1,4 +1,4 @@
-import '../styles/components/inputIcon.css'
+import '../../styles/components/inputs/inputIcon.css'
 
 
 function InputIcon({icon,texto,buscar}){

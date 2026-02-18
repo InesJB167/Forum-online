@@ -1,10 +1,10 @@
 import { BellDotIcon, Search, UserCircle2 } from 'lucide-react';
 import '../styles/components/topBar.css'
-import InputIcon from './InputSearch';
-import ButtomIcon from './ButtomIcon';
+import InputIcon from './inputs/InputSearch';
+import ButtomIcon from './buttons/ButtomIcon';
 
 function TopBar(){
-    const icon= [<Search size={30} color='rgb(199, 196, 196)'/>,<BellDotIcon size={30} color='blue'/>,<UserCircle2 size={30} color='blue'/>]
+    const icon= [<Search size={30} color='rgb(199, 196, 196)'/>,<BellDotIcon size={30} color='#2563EB'/>,<UserCircle2 size={30} color='#2563EB'/>]
     return(
         <>
         <div className="topBar">

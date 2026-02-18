@@ -1,6 +1,6 @@
 import { MessageSquareMore, NotebookPenIcon, Star, ThumbsDown, ThumbsUp } from 'lucide-react';
-import Card from './Card';
-import TopicList from './TopicList.jsx'
+import Card from './card/Card.jsx';
+import TopicList from '../components/topic-elements/TopicList.jsx'
 import '../styles/components/main.css'
 
 function Main(){

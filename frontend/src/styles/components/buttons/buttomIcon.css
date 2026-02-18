@@ -2,3 +2,7 @@
     margin-top: 0;
     background-color: transparent;
 }
+
+.btnIcon:hover{
+    background-color: transparent;
+}

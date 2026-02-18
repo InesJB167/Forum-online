@@ -1,9 +1,11 @@
 .tituloR{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 .formR{
     gap: 10px;
+    position: relative;
+    top: 30px;
 }
-
 

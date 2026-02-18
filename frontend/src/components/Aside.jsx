@@ -16,14 +16,14 @@ function Aside({abrir}){
            </div>
            <nav>
             <ul>
-                <ItensList url='/Home' icon={icons[2]} text='Home'/>
-                <ItensList url='/Home/perfil' icon={icons[1]} text='Perfil'/>
+                <ItensList url='/Home' icon={icons[2]} text='HOME'/>
+                <ItensList url='/Home/perfil' icon={icons[1]} text='PERFIL'/>
                 
-                <li className='btn'><button className='btnSair' onClick={abrir}>{icons[3]}<p>Tópico</p></button></li>
+                <li className='btn'><button className='btnSair' onClick={abrir}>{icons[3]}<p>TÓPICO</p></button></li>
                  
-                <ItensList url='/Home/chat' icon={icons[4]} text='Chat'/>
-                <ItensList url='/Home/config' icon={icons[5]} text='Configurações'/>
-                <li className='btn'><button className='btnSair'>{icons[6]}<p>Sair</p></button></li>
+                <ItensList url='/Home/chat' icon={icons[4]} text='CHAT'/>
+                <ItensList url='/Home/config' icon={icons[5]} text='CONFIGURAÇÕES'/>
+                <li className='btn'><button className='btnSair'>{icons[6]}<p>SAIR</p></button></li>
             </ul>
            </nav>
         </div>

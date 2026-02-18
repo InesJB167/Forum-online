@@ -1,12 +1,12 @@
-import '../styles/components/inputGroup.css'
+import '../../styles/components/inputs/inputGroup.css'
 
 
-function InputGroup({label,type,id,className}){
+function InputGroup({label,type,id,className,classNameInput}){
     //as crases permiteem concatenar dois elementos sem precisar usar o sinal + 
     return(
         <div className={`container ${className}`}>
             <label htmlFor={id}>{label}</label>
-            <input type={type}  id={id} className={`inputR ${className}`}/>
+            <input type={type}  id={id} className={`inputR ${classNameInput}`}/>
         </div>
     );
 }
