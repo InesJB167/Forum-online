@@ -1,3 +1,7 @@
+# Segredos e Configurações
+.env
+.env.local
+
 # Logs
 logs
 *.log
