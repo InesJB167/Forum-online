@@ -4,7 +4,6 @@
 
 require('dotenv').config();//vai carregar as variaveis do arquivo .env
 const express = require('express');
-const mysql = require('mysql2');
 const cors = require('cors');
 
 // ==========================================
@@ -12,7 +11,7 @@ const cors = require('cors');
 // ==========================================
 
 const app = express();
-PORT = process.env.PORT || 3000 //permite acessar a porta estabelecida no env
+const PORT = process.env.PORT || 3000 //permite acessar a porta estabelecida no env
 app.use(cors()) // permite a conexao com o front
 app.use(express.json())// permite ler dados json
 
@@ -20,22 +19,20 @@ app.use(express.json())// permite ler dados json
 // CONEXÃO COM O BANCO DE DADOS MySQL
 // ==========================================
 
-const db = mysql.createConnection({  //cria conexão com o mysql
-    host : process.env.DB_HOST,
-    user : process.env.DB_USER,
-    password : process.env.DB_PASSWORD,
-    database : process.env.DB_NAME
-});
-
-db.connect((err) =>{
-    if(err){
-        console.error('Erro ao se conectar com o mysql' ,err.message);
-        process.exit(1);
-    }
-    console.log('Mysql conctado com sucesso!');
-})
+const db = require('./config/db')
 
 // ==========================================
 // ROTAS DA API (ENDPOINTS)
 // ==========================================
 
+app.get('/', (req,res)=> {//testando
+    res.send('API do Fórum Online funcionando kkk')
+})
+
+// ==========================================
+// INICIAR SERVIDOR
+// ==========================================
+
+app.listen(PORT, ()=>{
+    console.log(`Servidor aberto na porta ${PORT}`);
+})
