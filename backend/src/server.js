@@ -25,8 +25,10 @@ const db = require('./config/db');
 // ROTAS DA API (ENDPOINTS)
 // ==========================================
 const authRoutes = require('./routes/authRoutes');
+const loginRoute = require('./routes/loginRoute');
 
-app.use('/api/auth', authRoutes)//rota para autenticaçao
+app.use('/api/auth', authRoutes);//rota para autenticaçao
+app.use('/api' ,loginRoute);//rota para login no sistema
 
 // ==========================================
 // INICIAR SERVIDOR
