@@ -19,15 +19,14 @@ app.use(express.json())// permite ler dados json
 // CONEXÃO COM O BANCO DE DADOS MySQL
 // ==========================================
 
-const db = require('./config/db')
+const db = require('./config/db');
 
 // ==========================================
 // ROTAS DA API (ENDPOINTS)
 // ==========================================
+const authRoutes = require('./routes/authRoutes');
 
-app.get('/', (req,res)=> {//testando
-    res.send('API do Fórum Online funcionando kkk')
-})
+app.use('/api/auth', authRoutes)//rota para autenticaçao
 
 // ==========================================
 // INICIAR SERVIDOR
