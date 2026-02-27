@@ -26,14 +26,20 @@ const db = require('./config/db');
 // ==========================================
 const authRoutes = require('./routes/authRoutes');
 const loginRoute = require('./routes/loginRoute');
+const perfilRoute = require('./routes/perfilRoute');
 
-app.use('/api/auth', authRoutes);//rota para autenticaçao
-app.use('/api' ,loginRoute);//rota para login no sistema
+//rota para autenticaçao
+app.use('/api/auth', authRoutes);
 
+//rota para login no sistema
+app.use('/api', loginRoute);
+
+//rota de perfil de usuario
+app.use('/api/user', perfilRoute);
 // ==========================================
 // INICIAR SERVIDOR
 // ==========================================
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log(`Servidor aberto na porta ${PORT}`);
 })
