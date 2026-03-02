@@ -27,6 +27,7 @@ const db = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const loginRoute = require('./routes/loginRoute');
 const perfilRoute = require('./routes/perfilRoute');
+const editarPerfilRoute  = require('./routes/editarPerfilRoute');
 
 //rota para autenticaçao
 app.use('/api/auth', authRoutes);
@@ -36,6 +37,10 @@ app.use('/api', loginRoute);
 
 //rota de perfil de usuario
 app.use('/api/user', perfilRoute);
+
+//rota para atualizar perfil de usuario
+app.use('/api/perfil' ,editarPerfilRoute);
+
 // ==========================================
 // INICIAR SERVIDOR
 // ==========================================
