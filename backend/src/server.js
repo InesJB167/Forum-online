@@ -29,6 +29,7 @@ const loginRoute = require('./routes/loginRoute');
 const perfilRoute = require('./routes/perfilRoute');
 const editarPerfilRoute  = require('./routes/editarPerfilRoute');
 const criarCategoria = require('./routes/criarCategoriaRoute');
+const criarTopicoRoute = require('./routes/criarTopicoRoute');
 
 //rota para autenticaçao
 app.use('/api/auth', authRoutes);
@@ -44,6 +45,9 @@ app.use('/api/perfil' ,editarPerfilRoute);
 
 //rota para criar nova categoria
 app.use('/api/categoria' ,criarCategoria);
+
+//rota para criar novo topico
+app.use('/api/topico' ,criarTopicoRoute);
 
 // ==========================================
 // INICIAR SERVIDOR
