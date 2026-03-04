@@ -22,7 +22,8 @@ function authMiddleware(req, res, next) {
         console.log("DADOS DECODIFICADOS:", dadosUser);
         req.user = {
             idUser: dadosUser.id,
-            email: dadosUser.email
+            email: dadosUser.email,
+            role: dadosUser.role
         }
 
         console.log("VALOR DE dadosUser.id:", dadosUser.id);

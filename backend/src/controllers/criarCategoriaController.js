@@ -14,10 +14,11 @@ exports.criarCategoria = (req,res) =>{
     const sql ='INSERT INTO categoria (nomeCategoria,descricao,idUser) values (?,?,?)'
     db.query(sql,[nomeCategoria,descricao,idUser],(err,result)=>{
         if(err){
-            return res.status(500).json({err:"Erro ao criar a categoria!"});
+            console.log('Erro ao criar categoria:' ,err);
+            return res.status(500).json({err: err.message});
         }
 
-        res.status(200).json({message:"Categoria criada com sucesso!"});
+       return res.status(200).json({message:"Categoria criada com sucesso!"});
     })
 
 }

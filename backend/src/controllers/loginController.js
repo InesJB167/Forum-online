@@ -11,7 +11,9 @@ exports.login = async (req, res) => {
     }
 
     //2️⃣ Verificar se usuário existe (SELECT)
-    const sql = 'SELECT * FROM utilizador WHERE email = ?'
+    const sql = 'SELECT u.idUser, u.email, u.senhaHash, p.nome AS role FROM utilizador u JOIN perfil_user pu ON u.idUser = pu.idUser JOIN perfil p ON pu.idPerfil = p.idPerfil WHERE u.email = ?'
+
+
     db.query(sql, [email], async (err, result) => {
         //3️⃣ Se não existir → 400
         if (err) {
@@ -35,7 +37,8 @@ exports.login = async (req, res) => {
             //6️⃣ Se correta → gerar JWT
             const payload ={
                 id: result[0].idUser,
-                email: result[0].email
+                email: result[0].email,
+                role: result[0].role.toUpperCase()
             };
             console.log("SECRET LOGIN:", process.env.JWT_SECRET);
             const secret = process.env.JWT_SECRET;
