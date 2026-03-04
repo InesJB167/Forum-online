@@ -32,6 +32,7 @@ const criarCategoria = require('./routes/criarCategoriaRoute');
 const criarTopicoRoute = require('./routes/criarTopicoRoute');
 const criarPost = require('./routes/criarPostRoute');
 const editarPost = require('./routes/editarPostRoute');
+const deletarPost = require('./routes/deletarPostRoute');
 
 //rota para autenticaçao
 app.use('/api/auth', authRoutes);
@@ -56,6 +57,9 @@ app.use('/api/post' ,criarPost);
 
 //rota para editar post
 app.use('/api/post' ,editarPost);
+
+//rota para deletar post
+app.use('/api/post' ,deletarPost);
 
 // ==========================================
 // INICIAR SERVIDOR
