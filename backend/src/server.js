@@ -3,6 +3,8 @@
 // ==========================================
 
 require('dotenv').config();//vai carregar as variaveis do arquivo .env
+console.log('DB_USER:', process.env.DB_USER);
+
 const express = require('express');
 const cors = require('cors');
 
@@ -33,6 +35,7 @@ const criarTopicoRoute = require('./routes/criarTopicoRoute');
 const criarPost = require('./routes/criarPostRoute');
 const editarPost = require('./routes/editarPostRoute');
 const deletarPost = require('./routes/deletarPostRoute');
+const listarCategoria = require('./routes/listarCategoriaRoute');
 
 //rota para autenticaçao
 app.use('/api/auth', authRoutes);
@@ -60,6 +63,9 @@ app.use('/api/post' ,editarPost);
 
 //rota para deletar post
 app.use('/api/post' ,deletarPost);
+
+//rota para listar categorias
+app.use('/api/categoria' ,listarCategoria);
 
 // ==========================================
 // INICIAR SERVIDOR
