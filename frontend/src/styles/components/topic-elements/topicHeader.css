@@ -1,5 +1,5 @@
 .header{
-    width: 680px;
+    width: 97%;
     height: 180px;
     border: 1px solid var(--corFundoHover2);
     border-radius: 20px;
@@ -8,7 +8,7 @@
 
 #btnEncolher{
     position: absolute;
-    left: 69%;
+    left: 95%;
 }
 
 .encolher{

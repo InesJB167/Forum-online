@@ -14,17 +14,15 @@ function Main(){
             </div>
 
             <div className="cards">
-                <Card numero='12' icone={icon[0]} texto='Tópicos criados' frase='Ideias que você lançou' />
-                <Card numero='7' icone={icon[1]} texto='Comentários' frase='Sua participação nos debates' />
-                <Card numero='3' icone={icon[2]} texto='Likes' frase='A comunidade curtiu' />
+                <Card numero='0' icone={icon[0]} texto='Tópicos criados' frase='Ideias que você lançou' />
+                <Card numero='0' icone={icon[1]} texto='Comentários' frase='Sua participação nos debates' />
+                <Card numero='0' icone={icon[2]} texto='Likes' frase='A comunidade curtiu' />
                 <Card numero='0' icone={icon[3]} texto='Dislikes' frase='Opiniões divergentes'/>
             </div>
             <div className="topicosRecentes">
                 <h3>Tópicos recentes</h3>
                 <div className="listaTopicos">
-                    <TopicList topico='IA ,programadores em extinsão ?' autor='Henrique Silva' tempo='2'/>
-                    <TopicList topico='IA ,programadores em extinsão ?' autor='Henrique Silva' tempo='2'/>
-                    <TopicList topico='IA ,programadores em extinsão ?' autor='Henrique Silva' tempo='2'/>
+                    
                 </div>
             </div>
         </div>

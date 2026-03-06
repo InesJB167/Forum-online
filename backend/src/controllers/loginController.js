@@ -21,7 +21,7 @@ exports.login = async (req, res) => {
         }
 
         if(result.length === 0){
-            return res.status(400).json({message: 'Email ou senha inválidos!'});
+            return res.status(401).json({message: 'Email ou senha inválidos!'});
         }
 
         if (result.length > 0) {
@@ -31,7 +31,7 @@ exports.login = async (req, res) => {
             //5️⃣ Se senha incorreta → 400
             const isMatch = await bcrypt.compare(senha,senhaDb);
             if(!isMatch){
-                return res.status(400).json({message: 'Email ou senha inválidos!'});
+                return res.status(401).json({message: 'Email ou senha inválidos!'});
             }
 
             //6️⃣ Se correta → gerar JWT
