@@ -28,6 +28,10 @@ function Login() {
             const resposta = await api.post("/login", { email, senha });
             console.log("Resposta da API:", resposta);
 
+            // Limpar campos
+            setEmail("");
+            setSenha("");
+
             //guardar os dados "token" na pagina  
             localStorage.setItem("token", resposta.data.token);
 
