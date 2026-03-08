@@ -61,7 +61,7 @@ function PerfilUser(){
 
                 <div className="bio">
                     <label htmlFor="bio">Bio:</label>
-                    <textarea name="bio" value={bio} id="bio"></textarea>
+                    <textarea name="bio" value={bio} onChange={(e)=>setBio} id="bio"></textarea>
                 </div>
                 <Buttom texto='Salvar alterações' type='submit' className='btnAlterar' />
             </div>

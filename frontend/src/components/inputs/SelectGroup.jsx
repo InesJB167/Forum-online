@@ -1,6 +1,7 @@
 import '../../styles/components/inputs/selectGroup.css'
 
-function SelectGroup({label,id,options,className,classNameInput,value,onChange}){
+function SelectGroup({label,id,options=[],className,classNameInput,value,onChange}){
+
     return(
         <div className={`containerSelect ${className}`}>
             <label htmlFor={id}>{label}</label>
@@ -12,12 +13,27 @@ function SelectGroup({label,id,options,className,classNameInput,value,onChange})
                 onChange={onChange}
                 className={`container ${classNameInput}`}
             >
-                
-                {options.map((opcao, index) => (
-                    <option key={index} value={opcao}>
-                        {opcao}
-                    </option>
-                ))}
+                <option value="">Selecione</option>
+
+                {options.map((opcao, index) => {
+
+                    // se for string
+                    if(typeof opcao === "string"){
+                        return (
+                            <option key={index} value={opcao}>
+                                {opcao}
+                            </option>
+                        )
+                    }
+
+                    // se for objeto
+                    return (
+                        <option key={opcao.idCategoria} value={opcao.idCategoria}>
+                            {opcao.nomeCategoria}
+                        </option>
+                    )
+
+                })}
 
             </select>
 
