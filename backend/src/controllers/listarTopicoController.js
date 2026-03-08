@@ -1,3 +1,4 @@
+//listar topicos por cattegoria
 const db = require('../config/db');
 
 exports.listarTopico = (req,res) =>{

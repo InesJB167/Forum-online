@@ -12,9 +12,9 @@ function TopicoCategoria({topico,categoria}){
                 <p className="categoria">Categoria:{categoria} </p>
             </div>
             <div className="reacoes">   
-                <ReactionIcon icon={icone[0]} number='2'/>
-                <ReactionIcon icon={icone[1]} number='5'/>
-                <ReactionIcon icon={icone[2]} number='2'/>
+                <ReactionIcon icon={icone[0]} number='0'/>
+                <ReactionIcon icon={icone[1]} number='0'/>
+                <ReactionIcon icon={icone[2]} number='0'/>
             </div>
         </div>
         </>

@@ -8,7 +8,7 @@ exports.perfil = (req, res) => {
     console.log("ID USER", idUser)
     
     //Buscar os dados atualizados do usuário no banco
-    const sql = 'SELECT nome, email, genero, dataRegistro, estado FROM utilizador WHERE idUser = ?'
+    const sql = 'SELECT nome, nameUser, bio, email, genero, dataRegistro, estado FROM utilizador WHERE idUser = ?'
     db.query(sql,[idUser],(err,result)=>{ 
         if(err){
             return res.status(500).json({message: 'Erro ao buscar dados do usuário'});
