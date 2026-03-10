@@ -23,7 +23,8 @@ function authMiddleware(req, res, next) {
         req.user = {
             idUser: dadosUser.id,
             email: dadosUser.email,
-            role: dadosUser.role
+            role: dadosUser.role,
+            nameUser: dadosUser.nameUser
         }
 
         console.log("VALOR DE dadosUser.id:", dadosUser.id);

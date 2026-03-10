@@ -1,7 +1,23 @@
 
-.mensagens{
+.mensagem{
     display: flex;
+    flex-direction: row;
     gap: 10px;
+    height: auto;
+    width: 100%;
+}
+
+
+/* mensagem dos outros */
+.mensagem.esquerda {
+    flex-direction: row; /* avatar à esquerda */
+    justify-content: flex-start;
+}
+
+/* mensagem do usuário */
+.mensagem.direita {
+    flex-direction: row-reverse; /* avatar à direita */
+    justify-content: flex-end;
 }
 
 .postContent{
@@ -9,15 +25,10 @@
     padding: 10px;
     border-radius: 20px;
     border: 1px solid var(--corFundoHover2);
-    width: 400px;
+    max-width: 80%;
     gap: 10px;
 }
 
-.msg{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* temtando fazer um acabamento nas mensagens
 .postContent::after{

@@ -6,9 +6,10 @@ exports.listarTopicoPorUser = (req,res) =>{
     const idUser = req.user.idUser;
 
     const sql = `
-        SELECT t.desgnacao, c.nomeCategoria
+        SELECT t.idTopico, u.nameUser, t.desgnacao, c.nomeCategoria
         FROM topico t
         JOIN categoria c ON c.idCategoria = t.idCategoria
+        JOIN utilizador u ON u.idUser = t.idUser
         WHERE t.idUser = ?
     `;
 

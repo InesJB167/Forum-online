@@ -35,6 +35,9 @@ function Login() {
             //guardar os dados "token" na pagina  
             localStorage.setItem("token", resposta.data.token);
 
+            //guarda o user
+            localStorage.setItem("user", JSON.stringify(resposta.data.user));
+
             //mandar o user para o dashboad
             //por enquanto todos user sao encaminhados pra o mesmo dashbord futuramente isso vai mudar
             navigate('/Home'); 

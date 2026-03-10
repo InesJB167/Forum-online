@@ -64,7 +64,7 @@ function Topico({ isOpen, Closed }) {
         <>
             <div className="modal-fundo">
                 <div className="conteudo-modal">
-                    <ButtomIcon icon={icon} fechar={Closed} id='iconeFechar' />
+                    <ButtomIcon icon={icon} onClick={Closed} id='iconeFechar' />
 
                     <h2 className="tituloTopico">Criar Novo Tópico</h2>
                     <form onSubmit={criarTopico}>

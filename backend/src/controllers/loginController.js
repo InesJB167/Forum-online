@@ -6,12 +6,12 @@ exports.login = async (req, res) => {
     //1️⃣ Receber email e senha
     const { email, senha } = req.body;
 
-    if(!email || !senha){
-        return res.status(400).json({message:'Email e senha são obrigatorios!'});
+    if (!email || !senha) {
+        return res.status(400).json({ message: 'Email e senha são obrigatorios!' });
     }
 
     //2️⃣ Verificar se usuário existe (SELECT)
-    const sql = 'SELECT u.idUser, u.email, u.senhaHash, p.nome AS role FROM utilizador u JOIN perfil_user pu ON u.idUser = pu.idUser JOIN perfil p ON pu.idPerfil = p.idPerfil WHERE u.email = ?'
+    const sql = 'SELECT u.idUser, u.nameUser, u.email, u.senhaHash, p.nome AS role FROM utilizador u JOIN perfil_user pu ON u.idUser = pu.idUser JOIN perfil p ON pu.idPerfil = p.idPerfil WHERE u.email = ?'
 
 
     db.query(sql, [email], async (err, result) => {
@@ -20,8 +20,8 @@ exports.login = async (req, res) => {
             return res.status(500).json({ err: err.message });
         }
 
-        if(result.length === 0){
-            return res.status(401).json({message: 'Email ou senha inválidos!'});
+        if (result.length === 0) {
+            return res.status(401).json({ message: 'Email ou senha inválidos!' });
         }
 
         if (result.length > 0) {
@@ -29,26 +29,35 @@ exports.login = async (req, res) => {
             const senhaDb = result[0].senhaHash;
 
             //5️⃣ Se senha incorreta → 400
-            const isMatch = await bcrypt.compare(senha,senhaDb);
-            if(!isMatch){
-                return res.status(401).json({message: 'Email ou senha inválidos!'});
+            const isMatch = await bcrypt.compare(senha, senhaDb);
+            if (!isMatch) {
+                return res.status(401).json({ message: 'Email ou senha inválidos!' });
             }
 
             //6️⃣ Se correta → gerar JWT
-            const payload ={
+            const payload = {
                 id: result[0].idUser,
                 email: result[0].email,
-                role: result[0].role.toUpperCase()
+                role: result[0].role.toUpperCase(),
+                nameUser: result[0].nameUser
             };
             console.log("SECRET LOGIN:", process.env.JWT_SECRET);
             const secret = process.env.JWT_SECRET;
-            const options = {expiresIn :'2h'};
-            const token = jwt.sign(payload,secret,options);
+            const options = { expiresIn: '2h' };
+            const token = jwt.sign(payload, secret, options);
 
             //7️⃣ Retornar token
-            return res.status(200).json({token})
+            return res.status(200).json({
+                token,
+                user: {
+                    idUser: result[0].idUser,
+                    nameUser: result[0].nameUser,
+                    email: result[0].email,
+                    role: result[0].role.toUpperCase()
+                }
+            })
         }
 
     });
- 
+
 }

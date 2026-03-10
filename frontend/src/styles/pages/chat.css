@@ -4,27 +4,29 @@
     height: 100vh;
 }
 
-#topic1{
-    width: 360px;
-    padding-left: 0;
-    padding-right: 0;
-    position: absolute;
-    left: 73%;
-    top: 11%;
-}
-
-#topic1 h2{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .msg{
     width: 97%;
-    height: 500px;
-    padding: 10px;
+    height: auto;
+    padding: 120px 10px 10px 10px;
     border: 1px solid var(--corFundoHover2);
     margin-top: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    flex: 1;
+}
+
+
+.chat-mensagem{
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mensagem-chat{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .postar{

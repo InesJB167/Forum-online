@@ -1,9 +1,13 @@
 .header{
-    width: 97%;
+    width: 76%;
     height: 180px;
     border: 1px solid var(--corFundoHover2);
     border-radius: 20px;
     padding: 7px;
+    position: fixed;
+    top: 13%;
+    z-index: 10;
+    background-color: blue;
 }
 
 #btnEncolher{

@@ -19,6 +19,7 @@
     gap: 10px;
     color: var(--corFundoPrincipal);
     font-weight: 700;
+    z-index: 1000;
 }
 
 #iconeFechar{
