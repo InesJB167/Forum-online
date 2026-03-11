@@ -22,6 +22,7 @@ function Chat() {
     const messageRef = useRef(null);
     const userLogado = JSON.parse(localStorage.getItem("user")) || {};
     console.log("USER LOGADO : ", userLogado.nameUser);
+    
 
     const [texto, setTexto] = useState("");
     const [file, setFile] = useState("");
@@ -113,6 +114,34 @@ function Chat() {
         }
     }
 
+    async function editarPost(idPostagem, novoTexto) {
+  try {
+    // Atualiza no backend
+    await api.put(`/post/editar/${idPostagem}`, { texto: novoTexto });
+
+    // Atualiza localmente
+    setMensagem((prev) =>
+      prev.map((msg) =>
+        msg.idPostagem === idPostagem ? { ...msg, texto: novoTexto } : msg
+      )
+    );
+  } catch (err) {
+    console.log("Erro ao editar post:", err);
+    alert("Não foi possível editar o post.");
+  }
+}
+
+    async function deletarPost(idPostagem) {
+    try {
+        await api.delete(`/post/deletar/${idPostagem}`);
+        // Atualiza localmente
+        setMensagem(prev => prev.filter(msg => msg.idPostagem !== idPostagem));
+    } catch (err) {
+        console.log("Erro ao deletar post:", err);
+        alert("Não foi possível deletar o post.");
+    }
+}
+
     return (
         <>
             <div className="chat">
@@ -135,6 +164,8 @@ function Chat() {
                                 autor={msg.nameUser}
                                 content={msg.texto}
                                 ehUsuario={msg.idUser === userLogado.idUser}
+                                onEdit={(novoTexto)=> editarPost(msg.idPostagem, novoTexto)}
+                                onDelete={() => deletarPost(msg.idPostagem)}
                             />
                         ))}
 

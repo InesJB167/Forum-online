@@ -3,5 +3,5 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const { editarPost } = require('../controllers/editarPostController');
 const router = express.Router();
 
-router.put('/:idPostagem' ,authMiddleware,editarPost);
+router.put('/editar/:idPostagem' ,authMiddleware,editarPost);
 module.exports = router;
