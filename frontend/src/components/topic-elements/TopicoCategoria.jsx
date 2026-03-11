@@ -1,14 +1,23 @@
 import { MessageSquareMore, ThumbsDown, ThumbsUp } from "lucide-react";
 import '../../styles/components/topic-elements/topicList.css'
 import ReactionIcon from "../RectionsIcon"
+import { useNavigate } from "react-router-dom";
 
 function TopicoCategoria({topico,categoria}){
     const icone=[<MessageSquareMore size={16}/>,<ThumbsUp size={16}/>,<ThumbsDown size={16} />]
+    const navigate = useNavigate();
+
+
+    const abrirChat = () => {
+        // pega o id do tópico e vai para o chat
+        navigate(`/Home/chat/${topico.idTopico}`);
+    };
+
     return(
         <>
-        <div className="topicos">
+        <div className="topicos" onClick={abrirChat}>
             <div className="autor-tempo">
-                <label htmlFor="tema" className="tema">{topico}</label>
+                <label htmlFor="tema" className="tema">{topico.desgnacao}</label>
                 <p className="categoria">Categoria:{categoria} </p>
             </div>
             <div className="reacoes">   

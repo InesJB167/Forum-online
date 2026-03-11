@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import api from '../services/api';
 import { useRef } from 'react';
 import { io } from "socket.io-client";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Chat() {
     //variaveis para o topico
@@ -14,10 +15,13 @@ function Chat() {
     const [mensagem, setMensagem] = useState([]);
     const [erro, setErro] = useState("");
 
+    const navigate = useNavigate();
+    const { idTopico } = useParams();
+
     //variaveis pra as mensagens
     const messageRef = useRef(null);
     const userLogado = JSON.parse(localStorage.getItem("user")) || {};
-    console.log("USER LOGADO : ",userLogado.nameUser);
+    console.log("USER LOGADO : ", userLogado.nameUser);
 
     const [texto, setTexto] = useState("");
     const [file, setFile] = useState("");
@@ -41,26 +45,52 @@ function Chat() {
     }, []);
 
     useEffect(() => {
-        async function abrirChat() {
-            try {
-                const respostaTopico = await api.get("/topico/mostrar/ultimo");
-                setTopico(respostaTopico.data);
-                console.log('Ultimo Topico ', respostaTopico.data);
 
-                const respostaPost = await api.get("/topico/ultimo/posts");
-                setMensagem(respostaPost.data);
-                console.log('Posts do Ultimo Topico ', respostaPost.data);
+        async function buscarUltimoTopico() {
+
+            if (idTopico) return; // se já tem tópico não faz nada
+
+            try {
+
+                const resposta = await api.get("/topico/mostrar/ultimo");
+
+                const ultimoTopico = resposta.data;
+
+                navigate(`/Home/chat/${ultimoTopico.idTopico}`);
 
             } catch (err) {
-                console.log('Erro ao buscar Ultimo Topico ', err);
-                setErro('Erro ao buscar Ultimo Topico!');
+                console.log("Erro ao buscar último tópico", err);
+            }
+
+        }
+
+        buscarUltimoTopico();
+
+    }, [idTopico]);
+
+    useEffect(() => {
+        if (!idTopico) return;//se nao tiver o idTopico 
+
+        async function abrirChat() {
+            try {
+                const respostaTopico = await api.get(`/topico/${idTopico}`);
+                setTopico(respostaTopico.data);
+                console.log('topico selecionado ', respostaTopico.data);
+
+                const respostaPost = await api.get(`/topico/${idTopico}/posts`);
+                setMensagem(respostaPost.data);
+                console.log('Posts do topico selecionado ', respostaPost.data);
+
+            } catch (err) {
+                console.log('Erro ao buscar Topico  ', err);
+                setErro('Erro ao buscar Topico!');
             }
         }
 
         abrirChat();
-    }, []);
+    }, [idTopico]);
 
-
+    //para deixar a ultima  msg em baixo
     useEffect(() => {
         if (messageRef.current) {
             messageRef.current.scrollTop = messageRef.current.scrollHeight
@@ -68,6 +98,8 @@ function Chat() {
     }, [mensagem]);
 
     async function criarPost() {
+        if (!topico) return;
+
         try {
             const postar = await api.post("/post/criar", { texto, file, idTopico: topico.idTopico });
             console.log("dados post ", postar.data);
@@ -90,7 +122,14 @@ function Chat() {
                     <TopicHeader titulo={topico?.desgnacao} autor={topico?.nameUser} categoria={topico?.nomeCategoria} descricao={topico?.descricao} />
 
                     <div className="chat-mensagem" ref={messageRef}>
-                        {mensagem.map((msg) => (
+
+                        {!idTopico && (
+                            <p style={{ textAlign: "center" }}>
+                                Selecione um tópico para começar a conversar.
+                            </p>
+                        )}
+
+                        {idTopico && mensagem.map((msg) => (
                             <Messeger
                                 key={msg.idPostagem}
                                 autor={msg.nameUser}
@@ -98,9 +137,18 @@ function Chat() {
                                 ehUsuario={msg.idUser === userLogado.idUser}
                             />
                         ))}
+
                     </div>
 
-                    <ChatInput className='postar' value={texto} onChange={(e) => setTexto(e.target.value)} onChangeFile={(e) => setFile(e.target.files[0])} onSend={criarPost} />
+                    {idTopico && (
+                        <ChatInput
+                            className='postar'
+                            value={texto}
+                            onChange={(e) => setTexto(e.target.value)}
+                            onChangeFile={(e) => setFile(e.target.files[0])}
+                            onSend={criarPost}
+                        />
+                    )}
                 </div>
             </div>
 

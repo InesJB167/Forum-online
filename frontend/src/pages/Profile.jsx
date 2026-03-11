@@ -91,7 +91,7 @@ function Profile() {
                                 <div className="resumo">
                                     <p className="topico">Likes</p>
                                     <p className="numero">0</p>
-                                </div>
+                                </div>  
                                 <div className="resumo" id="ultimoResumo">
                                     <p className="topico">Dislikes</p>
                                     <p className="numero">0</p>
@@ -103,7 +103,7 @@ function Profile() {
                         <h2 id="tituloTopic">Meus tópicos</h2>
                         { topico.length === 0 && <p>Ainda não criou nenhum topico!</p>}
                         {topico.map((t, index) => (
-                            <TopicoCategoria key={index} topico={t.desgnacao} categoria={t.nomeCategoria} />
+                            <TopicoCategoria key={index} topico={t} categoria={t.nomeCategoria} />
                         ))}
 
                     </div>
