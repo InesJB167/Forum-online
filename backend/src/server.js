@@ -68,6 +68,7 @@ const ultimoTopico = require('./routes/listarUltimoTopicoRoute');
 const mensagensDoTopico = require('./routes/postsUltimoTopicoRoute');
 const listarPostsPorTopico = require('./routes/listarPostsRoute');
 const mostrarTopicoPorId = require('./routes/buscarTopicoRoute');
+const buscarTopicoPeloNome = require('./routes/buscarTopicoPorNomeRoute');
 
 //rota para autenticaçao
 app.use('/api/auth', authRoutes);
@@ -114,8 +115,12 @@ app.use('/api' ,mensagensDoTopico);
 //rota listar post de qualquer topico
 app.use("/api/topico/" ,listarPostsPorTopico);
 
+//rota para buscar topico pelo seu nome
+app.use('/api/topico' ,buscarTopicoPeloNome);
+
 //rota para buscar topico pelo seu id
 app.use("/api/topico" ,mostrarTopicoPorId);
+
 
 // ==========================================
 // INICIAR SERVIDOR

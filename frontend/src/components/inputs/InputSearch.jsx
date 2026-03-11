@@ -1,12 +1,12 @@
 import '../../styles/components/inputs/inputIcon.css'
 
 
-function InputIcon({icon,texto,buscar}){
+function InputIcon({icon,type,placeholder,value,onChange}){
     
     return(
         <>
         <div className="input">
-            <input className='inputItem' type={texto} placeholder={buscar} />
+            <input className='inputItem' type={type} placeholder={placeholder} value={value} onChange={onChange}/>
             <button className='btn'>{icon}</button>
         </div>
         </>
