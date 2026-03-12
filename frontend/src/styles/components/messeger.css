@@ -18,6 +18,8 @@
 .mensagem.direita {
     flex-direction: row-reverse; /* avatar à direita */
     justify-content: flex-end;
+    position: relative;
+    left: 65%;
 }
 
 .postContent{
@@ -25,10 +27,40 @@
     padding: 10px;
     border-radius: 20px;
     border: 1px solid var(--corFundoHover2);
-    max-width: 80%;
+    width: 300px;
     gap: 10px;
 }
 
+.btn-edit-delete{
+    width: 30px;
+    background-color: transparent;
+    height: 15px;
+    color: var(--corFundoHover2);
+}
+
+.btn-edit-delete:hover{
+    background-color: transparent;
+}
+
+.acoesPost {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inputEditar{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--corTextoPrincipal);
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.autor{
+    color: var(--corFundoHover2);
+    font-weight: bold;
+}
 
 /* temtando fazer um acabamento nas mensagens
 .postContent::after{

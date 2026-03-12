@@ -38,6 +38,14 @@ body{
     padding: 40px;
 }
 
+#emailL ,#senhaL{
+    width: 360px;
+    height: 25px;
+    border: none;
+    padding: 5px 5px 5px 10px;
+}
+
+
 h1{
     margin-bottom: 2px;
 }

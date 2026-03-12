@@ -16,10 +16,20 @@
 }
 
 .inputUser input{
-    width: 400px;
     border: none;
-    background-color: transparent;
-    border-bottom: 1px solid black;
+    padding-left: 10px;
+}
+
+#nome{
+    width: 400px;
+}
+
+#nomeUser{
+    width: 368px;
+}
+
+#email{
+    width: 405px;
 }
 
 .meuPerfil{
@@ -34,6 +44,10 @@
 #bio{
     width: 500px;
     height: 100px;
+    background-color: #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
 }
 
 .btnAlterar{

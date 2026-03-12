@@ -9,3 +9,9 @@
     top: 30px;
 }
 
+#nomeL{
+    width: 360px;
+    height: 25px;
+    border: none;
+    padding: 5px 5px 5px 10px;
+}

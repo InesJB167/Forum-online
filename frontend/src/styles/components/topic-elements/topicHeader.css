@@ -7,7 +7,7 @@
     position: fixed;
     top: 13%;
     z-index: 10;
-    background-color: blue;
+    background-color: var(--corFundoRelativo);
 }
 
 #btnEncolher{

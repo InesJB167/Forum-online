@@ -1,7 +1,6 @@
 import '../../styles/components/topic-elements/topicHeader.css'
 import {ChevronDown, ChevronUp} from 'lucide-react'
 import { useState } from 'react'
-import ButtomIcon from '../buttons/ButtomIcon'
 
 function TopicHeader ({categoria,autor,tempo,descricao,titulo}){
     const icone=[<ChevronDown size={25}/>,<ChevronUp size={25}/>]
@@ -10,10 +9,9 @@ function TopicHeader ({categoria,autor,tempo,descricao,titulo}){
     return(
         <>
         <div className={`header ${encolhido ? 'encolher': ''}`}>
-            <ButtomIcon icon={encolhido ? icone[0]:icone[1]} id='btnEncolher' fechar={()=>setEncolhido(!encolhido)
-            }/>
+            
             <h1>{titulo}</h1>
-            <p className='catParagrafo'>Catgoria:{categoria} .Por: {autor} á {tempo}</p>
+            <p className='catParagrafo'>Catgoria : {categoria} | Por: {autor}  {tempo}</p>
             <p className={`des1 ${encolhido ? 'paragrafDesc': ''}`}>{descricao}</p>
         </div>
         </>
@@ -21,3 +19,6 @@ function TopicHeader ({categoria,autor,tempo,descricao,titulo}){
 }
 
 export default TopicHeader
+
+/** <ButtomIcon icon={encolhido ? icone[0]:icone[1]} id='btnEncolher' fechar={()=>setEncolhido(!encolhido)
+            }/>*/

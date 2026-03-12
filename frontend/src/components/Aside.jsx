@@ -1,5 +1,5 @@
 import '../styles/components/aside.css'
-import {Home, ListIcon, LogOut, MessageCircleIcon, MessageSquareMore, SettingsIcon, UserCircle2} from 'lucide-react'
+import {Home, ListIcon, LogOut, LucideMessageCircleQuestionMark, LucideMessageSquareHeart, LucideMessagesSquare, MessageCircleIcon, MessageSquareMore, MessagesSquareIcon, SettingsIcon, UserCircle2} from 'lucide-react'
 import ItensList from './ItensList'
 
 function Aside({abrir}){
@@ -11,7 +11,7 @@ function Aside({abrir}){
         <>
         <div className="aside">
            <div id="logo">
-             <h1>Fórum Online</h1>
+             <h1> <LucideMessagesSquare size={35}/> Fórum Online</h1>
              <p className='paragrafo'>Debates & Comunidade</p>
            </div>
            <nav>
@@ -23,7 +23,8 @@ function Aside({abrir}){
                  
                 <ItensList url='/Home/chat' icon={icons[4]} text='CHAT'/>
                 <ItensList url='/Home/config' icon={icons[5]} text='CONFIGURAÇÕES'/>
-                <li className='btn'><button className='btnSair'>{icons[6]}<p>SAIR</p></button></li>
+                <ItensList url='/Login' icon={icons[6]} text='SAIR'/>
+                
             </ul>
            </nav>
         </div>

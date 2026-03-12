@@ -26,6 +26,15 @@ function Register(){
             const dadosUser = await api.post("/auth/register" ,{nome,email,senha});
             console.log("Resposta da API:", dadosUser);
 
+            const resposta = await api.post("/login", { email, senha });
+            console.log("Resposta da API:", resposta);
+
+            //guardar os dados "token" na pagina  
+            localStorage.setItem("token", resposta.data.token);
+
+            //guarda o user
+            localStorage.setItem("user", JSON.stringify(resposta.data.user));
+
             // Limpar campos
             setNome("");
             setEmail("");
@@ -51,9 +60,9 @@ function Register(){
                 {erro && <p className="erro">{erro}</p>}
 
                 <form className='formR' onSubmit={cadastro}>
-                    <InputGroup className="containerRegister" label="Nome:" type="text" id="nome" value={nome} onChange={(e)=>setNome(e.target.value)} classNameInput='inputRegister'/>
-                    <InputGroup className="containerRegister" label="Email:" type="email" id="email" value={email} onChange={(e)=>setEmail(e.target.value)} classNameInput='inputRegister'/>
-                    <InputGroup className="containerRegister" label="Password:" type="password" id="senha" value={senha} onChange={(e)=>setSenha(e.target.value)} classNameInput='inputRegister'/>
+                    <InputGroup className="containerRegister" label="Nome:" type="text" id="nomeL" value={nome} onChange={(e)=>setNome(e.target.value)} classNameInput='inputRegister'/>
+                    <InputGroup className="containerRegister" label="Email:" type="email" id="emailL" value={email} onChange={(e)=>setEmail(e.target.value)} classNameInput='inputRegister'/>
+                    <InputGroup className="containerRegister" label="Password:" type="password" id="senhaL" value={senha} onChange={(e)=>setSenha(e.target.value)} classNameInput='inputRegister'/>
                     <Buttom type="submit" texto="Criar conta"/>
                     <p id='link'>Já tem uma conta? <Link to="/Login" className='link'>Login!</Link></p>
                 </form>

@@ -6,3 +6,9 @@
 .btnIcon:hover{
     background-color: transparent;
 }
+
+.userName{
+    position: relative;
+    top: -7px;
+    font-size: 1.1rem;
+}

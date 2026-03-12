@@ -68,8 +68,8 @@ function Login() {
                     </div>
                     <form className='formLogin' onSubmit={loginSystem} autoComplete='on'>
                         {erro && <p className='erroLogin'>{erro}</p>}
-                        <InputGroup label="Email:" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <InputGroup label="Password:" type="Password" id="senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                        <InputGroup label="Email:" type="email" id="emailL" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <InputGroup label="Password:" type="Password" id="senhaL" value={senha} onChange={(e) => setSenha(e.target.value)} />
                         <Buttom type="submit" texto="Login" />
                         <p id='link'>Já possui uma conta? <Link to="/Register" className='link'>Criar conta !</Link></p>
                     </form>
