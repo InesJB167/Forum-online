@@ -55,7 +55,7 @@ function PerfilUser(){
                     value={genero}
                     onChange={(e)=>setGenero(e.target.value)}
                     id='genero'
-                    options={['Masculino','Feminino']}
+                    options={['M','F']}
                     className='inputUser'
                     />
 
