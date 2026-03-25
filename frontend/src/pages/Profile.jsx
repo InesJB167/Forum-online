@@ -8,7 +8,7 @@ import api from "../services/api.js"
 
 function Profile() {
     //variaveis para o perfil
-    const [nome, setNome] = useState("");
+    const [nameUser, setNameUser] = useState("");
     const [estado, setEstado] = useState("");
     const [email, setEmail] = useState("");
 
@@ -30,7 +30,7 @@ function Profile() {
                 });
 
                 //pegar cada dado
-                setNome(resposta.data.nome);
+                setNameUser(resposta.data.nameUser);
                 setEmail(resposta.data.email);
                 setEstado(resposta.data.estado);
 
@@ -74,7 +74,7 @@ function Profile() {
                         </div>
                         <div className="userState">
                             <div className="nameUser">
-                                <p className="nome">{nome}</p>
+                                <p className="nome">{nameUser}</p>
                                 <p className="estado">{estado}</p>
                             </div>
                             <p className="emailUser">{email}</p>

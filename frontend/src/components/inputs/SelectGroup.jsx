@@ -1,6 +1,6 @@
 import '../../styles/components/inputs/selectGroup.css'
 
-function SelectGroup({label,id,options=[],className,classNameInput,value,onChange}){
+function SelectGroup({label,id,options=[],className,classNameInput,value,onChange,editavel}){
 
     return(
         <div className={`containerSelect ${className}`}>
@@ -12,8 +12,9 @@ function SelectGroup({label,id,options=[],className,classNameInput,value,onChang
                 value={value}
                 onChange={onChange}
                 className={`container ${classNameInput}`}
+                disabled={editavel}
             >
-                <option value="">Selecione</option>
+                
 
                 {options.map((opcao, index) => {
 

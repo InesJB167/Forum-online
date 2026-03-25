@@ -51,7 +51,13 @@
 }
 
 .btnAlterar{
-    width: 200px;
-    position: relative;
-    left: 60%;
+    width: 150px;
+    font-size: 1rem;
+
+}
+
+.botoes{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
 }

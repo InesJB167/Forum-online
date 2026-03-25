@@ -12,14 +12,15 @@ function TopBar() {
     const [resultados, setResultados] = useState([]);
 
     const navigate = useNavigate();
-
-    const [nameUser,setNameUser] = useState("");
+    const [role, setRole] = useState("");
+    const [nameUser, setNameUser] = useState("");
 
     const icon = [
         <Search size={30} color='rgb(199, 196, 196)' />,
         <BellDotIcon size={30} color='#2658c3' />,
         <UserCircle2 size={30} color='#2658c3' />
     ];
+
 
     useEffect(() => {
         const infoUser = async () => {
@@ -33,6 +34,7 @@ function TopBar() {
 
                 //pegar cada dado
                 setNameUser(resposta.data.nameUser);
+                setRole(resposta.data.role);
 
             } catch (error) {
                 console.log("Erro ao buscar perfil:", error);
@@ -41,6 +43,10 @@ function TopBar() {
         }
 
         infoUser();
+    }, []);
+
+    useEffect(() => {
+        setBusca("");
     }, []);
 
     const buscarTopicos = async (e) => {
@@ -75,12 +81,18 @@ function TopBar() {
 
                 <div className="pesquisa">
 
+                    {/* INPUTS FAKE PRA ENGANAR O CHROME */}
+                    <input type="text" name="email" style={{ display: "none" }} />
+                    <input type="password" name="password" style={{ display: "none" }} />
                     <InputIcon
                         icon={icon[0]}
-                        type='text'
+                        type='search'
                         placeholder='Buscar tópico'
                         value={busca}
                         onChange={buscarTopicos}
+                        readOnly={true}
+                        onFocus={(e) => e.target.setAttribute('readonly')}
+                        
                     />
 
                     {resultados.length > 0 && (
@@ -105,7 +117,9 @@ function TopBar() {
 
                 <div className="iconItems">
                     <ButtomIcon icon={icon[1]} />
-                    <ButtomIcon icon={icon[2]} />
+                    <div>
+                        <ButtomIcon icon={icon[2]} /> <label>{role}</label>
+                    </div>
                 </div>
 
             </div>
