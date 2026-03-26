@@ -1,0 +1,26 @@
+.UserListheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.UserListheader h1{
+    margin-left: 0;
+    font-size: 1.4rem;
+}
+
+.addUserButton{
+    font-size: 1rem;
+    gap: 5px;
+    padding-right: 5px;
+}
+
+.userList{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+}

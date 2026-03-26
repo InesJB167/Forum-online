@@ -83,6 +83,10 @@ app.use('/api/user', perfilRoute);
 //rota para atualizar perfil de usuario
 app.use('/api/perfil' ,editarPerfilRoute);
 
+//rota para listar usuarios
+const listarUserRoute = require('./routes/listarUserRoute');
+app.use('/api/users', listarUserRoute);
+
 //rota para criar nova categoria
 app.use('/api/categoria' ,criarCategoria);
 

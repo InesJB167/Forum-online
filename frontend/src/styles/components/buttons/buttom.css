@@ -20,5 +20,12 @@ button:hover{
     color: var(--corTextoPrincipal);
 }
 
+.button-content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;           /* Espaço entre ícone e texto */
+}
+
 
 

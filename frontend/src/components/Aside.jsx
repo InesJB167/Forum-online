@@ -22,7 +22,8 @@ function Aside({abrir}){
                 <li className='btn'><button className='btnSair' onClick={abrir}>{icons[3]}<p>TÓPICO</p></button></li>
                  
                 <ItensList url='/Home/chat' icon={icons[4]} text='CHAT'/>
-                <ItensList url='/Home/config' icon={icons[5]} text='CONFIGURAÇÕES'/>
+                {/** por enquanto nas configuraçoes vai apareçer o painel de configuraçoes do admin */}
+                <ItensList url='/Home/adminConfig' icon={icons[5]} text='CONFIGURAÇÕES'/>
                 <ItensList url='/Login' icon={icons[6]} text='SAIR'/>
                 
             </ul>

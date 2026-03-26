@@ -1,0 +1,45 @@
+.cardUser{
+    border: 1px solid blue;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 250px;
+}
+
+.cardUser p{
+    margin-bottom: 5px;
+}
+
+.cardUserHeader{
+    border-bottom: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.cardUserInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardUserInfo h2{
+    font-size: 1.2rem;
+}
+
+.cardUserInfo h4{
+    border: 1px solid blue;
+    width: 90px;
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.editar-excluir-user{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}

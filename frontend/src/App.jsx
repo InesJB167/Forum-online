@@ -6,6 +6,8 @@ import Profile from './pages/Profile';
 import Config from './pages/Config';
 import Main from './components/Main';
 import Chat from './pages/Chat'
+import AdminConfig from './pages/AdminConfig';
+import UserList from './components/UserList';
 
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
           {/* chat com tópico */}
           <Route path='chat/:idTopico' element={<Chat />} />
           <Route path='config' element={<Config />} />
+          <Route path='adminConfig' element={<AdminConfig />} >
+            <Route path='users' element={<UserList />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
