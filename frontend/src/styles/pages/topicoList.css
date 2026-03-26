@@ -1,0 +1,36 @@
+.todos-tpicos{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todos-tpicos h1{
+   margin-left: 0;
+}
+
+.topico-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topicoHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.topico-item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.editar-excluir-topicos{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}

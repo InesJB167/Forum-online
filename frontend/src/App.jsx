@@ -9,6 +9,7 @@ import Chat from './pages/Chat'
 import AdminConfig from './pages/AdminConfig';
 import UserList from './components/UserList';
 import Categoria from './pages/Categoria';
+import TopicoList from './pages/TopicoList';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='adminConfig' element={<AdminConfig />} >
             <Route path='users' element={<UserList />} />
             <Route path='categorias' element={<Categoria />} />
+            <Route path='topicos' element={<TopicoList />} />
           </Route>
         </Route>
       </Routes>

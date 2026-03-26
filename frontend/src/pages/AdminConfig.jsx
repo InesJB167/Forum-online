@@ -15,7 +15,7 @@ function AdminConfig (){
                 <div className="acoes-user">
                 <Button texto='Usuários' className='acoesItens' icon={icons[0]} onClick={()=> navigate("users")}/>
                 <Button texto='Categorias' className='acoesItens' icon={icons[1]} onClick={()=> navigate("categorias")}/>
-                <Button texto='Tópicos' className='acoesItens' icon={icons[2]}/>
+                <Button texto='Tópicos' className='acoesItens' icon={icons[2]} onClick={()=> navigate("topicos")}/>
                 </div>
 
                 <div className="quadro">

@@ -93,6 +93,9 @@ app.use('/api/categoria' ,criarCategoria);
 //rota para criar novo topico
 app.use('/api/topico' ,criarTopicoRoute);
 
+//rota para listar todos os topicos
+app.use('/api/topicos' ,require('./routes/listarTodosTopicosRoute'));
+
 //rota para criar post
 app.use('/api/post' ,criarPost);
 
