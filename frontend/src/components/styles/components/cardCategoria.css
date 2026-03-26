@@ -1,0 +1,29 @@
+.cardCategoria{
+    border: 1px solid blue;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 250px;
+}
+
+.categoriaHeader{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid blue;
+    padding-bottom: 10px;
+}
+
+.categoriaBody{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.editar-excluir-categoria{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}

@@ -2,7 +2,7 @@ const db = require('../config/db');
 
 exports.listarCategoria = (req,res) =>{
     //Consulta a tabela categoria no banco de dados
-    const sql = 'SELECT idCategoria, nomeCategoria FROM categoria ORDER BY nomeCategoria ASC';
+    const sql = 'SELECT c.idCategoria, c.nomeCategoria, c.descricao, c.dataCriacao, c.idUser ,u.nameUser FROM categoria c join utilizador u on c.idUser = u.idUser ORDER BY nomeCategoria ASC';
 
     //Retorna o resultado como JSON.
     db.query(sql,(err,result)=>{

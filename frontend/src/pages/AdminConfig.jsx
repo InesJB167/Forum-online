@@ -14,12 +14,13 @@ function AdminConfig (){
             
                 <div className="acoes-user">
                 <Button texto='Usuários' className='acoesItens' icon={icons[0]} onClick={()=> navigate("users")}/>
-                <Button texto='Categorias' className='acoesItens' icon={icons[1]}/>
+                <Button texto='Categorias' className='acoesItens' icon={icons[1]} onClick={()=> navigate("categorias")}/>
                 <Button texto='Tópicos' className='acoesItens' icon={icons[2]}/>
                 </div>
 
                 <div className="quadro">
-                    
+                    <h2>Bem-vindo(a) ao Painel de Configurações</h2>
+                    <p>Selecione uma opção no menu para começar.</p>
                     <Outlet />
                 </div>
             </div>

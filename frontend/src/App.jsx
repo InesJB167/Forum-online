@@ -8,6 +8,7 @@ import Main from './components/Main';
 import Chat from './pages/Chat'
 import AdminConfig from './pages/AdminConfig';
 import UserList from './components/UserList';
+import Categoria from './pages/Categoria';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='config' element={<Config />} />
           <Route path='adminConfig' element={<AdminConfig />} >
             <Route path='users' element={<UserList />} />
+            <Route path='categorias' element={<Categoria />} />
           </Route>
         </Route>
       </Routes>
