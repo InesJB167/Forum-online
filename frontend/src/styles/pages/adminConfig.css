@@ -17,12 +17,12 @@
 }
 
 .acoes-user{
-    border: 1px solid blue;
+    background-color: var(--corFundoRelativo);
     display: flex;
     flex-direction: column;
     width: 250px;
     height: 120px;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px;
 }
 
@@ -36,15 +36,16 @@
 }
 
 .acoesItens:hover{
-    background-color: var(--Hover);
+    background-color: #e7edf936;
     border-radius: 10px;
-    border-left: 5px solid blue;
+    border-left: 5px solid var(--Hover);
 }
 
 .quadro{
-    border: 1px solid blue;
+    background-color: var(--corFundoRelativo);
     width: 700px;
     padding: 20px;
     border-radius: 10px;
+    border-radius: 20px;
 }
 
